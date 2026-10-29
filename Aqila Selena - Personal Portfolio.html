@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqila Selena Fadhilatun Nisa | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelBlue: {
+                            light: '#E6F0FA',
+                            DEFAULT: '#A7C7E7',
+                            dark: '#7BA4DB'
+                        },
+                        pastelPink: {
+                            light: '#FFF0F5',
+                            DEFAULT: '#FFB7C5',
+                            dark: '#F498A9'
+                        },
+                        pastelYellow: {
+                            light: '#FFFDE7',
+                            DEFAULT: '#FCF4DD',
+                            accent: '#FFE599'
+                        },
+                        softDark: '#4A4E69'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        cute: ['"Fredoka"', 'cursive']
+                    },
+                    boxShadow: {
+                        'cute': '4px 4px 0px 0px rgba(74, 78, 105, 0.15)',
+                        'cute-hover': '6px 6px 0px 0px rgba(74, 78, 105, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .blob-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .blob-shape-2 {
+            border-radius: 40% 60% 70% 30% / 40% 50% 50% 60%;
+        }
+        /* Floating doodle animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+        @keyframes float-reverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(12px) rotate(-3deg); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .animate-float-slow {
+            animation: float-reverse 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#FCFCFD] text-softDark font-sans antialiased selection:bg-pastelPink selection:text-white relative overflow-x-hidden">
+
+    <!-- Background Decorative Pastel Blobs -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden opacity-60">
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-pastelBlue-light rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 -right-20 w-80 h-80 bg-pastelPink-light rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-pastelYellow-light rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-pastelPink/30 px-4 py-3 transition-all">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-cute text-2xl font-bold text-softDark flex items-center gap-2">
+                <span class="bg-pastelPink-light p-2 rounded-2xl text-pastelPink-dark border border-pastelPink/40">✨</span>
+                Aqila Selena
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-6 font-medium text-sm">
+                <a href="#about" class="hover:text-pastelPink-dark transition-colors py-1">Tentang</a>
+                <a href="#experience" class="hover:text-pastelPink-dark transition-colors py-1">Pengalaman</a>
+                <a href="#organization" class="hover:text-pastelPink-dark transition-colors py-1">Organisasi</a>
+                <a href="#skills" class="hover:text-pastelPink-dark transition-colors py-1">Keahlian</a>
+            </div>
+
+            <a href="#contact" class="hidden sm:inline-flex bg-pastelPink text-softDark font-bold px-5 py-2.5 rounded-full hover:bg-pastelPink-dark hover:text-white transition-all shadow-cute border border-pastelPink-dark/20 text-sm items-center gap-2">
+                <i class="fa-regular fa-paper-plane"></i> Hubungi Saya
+            </a>
+        </div>
+    </nav>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-4">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="min-h-[85vh] flex flex-col md:flex-row items-center justify-between py-12 md:py-20 gap-10">
+            <!-- Hero Text -->
+            <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+                <div class="inline-flex items-center gap-2 bg-pastelYellow px-4 py-2 rounded-full border border-pastelYellow-accent/50 text-xs md:text-sm font-semibold tracking-wide animate-bounce">
+                    <span>🌷</span> Welcome to My Personal Space
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-cute font-bold text-softDark leading-tight">
+                    A journey of <span class="text-pastelPink-dark underline decoration-pastelYellow decoration-wavy decoration-2">Knowledge</span>, <span class="text-pastelBlue-dark">Care</span> & <span class="text-amber-500">Impact</span>
+                </h1>
+                
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
+                    Halo! Saya <b>Aqila Selena Fadhilatun Nisa</b>. Seorang mahasiswi Hukum yang berdedikasi tinggi, berpengalaman dalam dunia FnB, serta bersemangat mengembangkan strategi Digital Marketing & Service Excellence.
+                </p>
+
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                    <a href="#contact" class="bg-pastelBlue text-softDark font-bold px-6 py-3 rounded-2xl hover:bg-pastelBlue-dark hover:text-white transition-all shadow-cute border border-slate-300 flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Kontak Saya
+                    </a>
+                    <a href="#experience" class="bg-white text-softDark font-bold px-6 py-3 rounded-2xl hover:bg-pastelYellow-light transition-all shadow-cute border border-slate-200 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase"></i> Lihat Pengalaman
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image with Cute Elements -->
+            <div class="w-full md:w-1/2 flex justify-center relative">
+                <!-- Cute Cartoon Floating Badges -->
+                <div class="absolute -top-4 left-4 md:left-8 bg-white p-3 rounded-2xl shadow-cute border border-pastelPink/40 z-20 animate-float flex items-center gap-2 text-xs font-bold">
+                    <span class="text-2xl">🥐</span>
+                    <div>
+                        <p class="text-slate-400 text-[10px]">Passion</p>
+                        <p class="text-softDark">FnB & Hospitality</p>
+                    </div>
+                </div>
+
+                <div class="absolute -bottom-2 right-4 md:right-8 bg-white p-3 rounded-2xl shadow-cute border border-pastelBlue/40 z-20 animate-float-slow flex items-center gap-2 text-xs font-bold">
+                    <span class="text-2xl">📱</span>
+                    <div>
+                        <p class="text-slate-400 text-[10px]">Skill</p>
+                        <p class="text-softDark">Digital Marketing</p>
+                    </div>
+                </div>
+
+                <div class="absolute top-1/2 -right-4 bg-pastelYellow p-3 rounded-2xl shadow-cute border border-amber-200 z-20 animate-float text-xs font-bold hidden sm:flex items-center gap-2">
+                    <span class="text-xl">⚖️</span> Law Student
+                </div>
+
+                <!-- Main Hero Photo -->
+                <div class="relative w-72 h-80 sm:w-80 sm:h-96">
+                    <div class="absolute inset-0 bg-pastelPink rounded-3xl rotate-3 shadow-md"></div>
+                    <div class="absolute inset-0 bg-pastelBlue rounded-3xl -rotate-3 shadow-md"></div>
+                    <div class="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-cute bg-white">
+                        <img src="https://i.supaimg.com/ce38aa7f-5e5b-457c-bd02-975186cf8be2/fb420dca-8f40-4d22-acaa-070e3d76583e.jpg" 
+                             alt="Aqila Selena" 
+                             class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x500/FFB7C5/FFFFFF?text=Aqila+Selena'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-16">
+            <div class="bg-white/80 backdrop-blur-sm border-2 border-pastelBlue/30 rounded-3xl p-6 md:p-12 shadow-cute relative overflow-hidden">
+                <!-- Cute SVG Background Cartoon Doodles -->
+                <svg class="absolute -bottom-6 -right-6 w-32 h-32 opacity-20 text-pastelPink" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <div class="relative w-56 h-56 sm:w-64 sm:h-64">
+                            <div class="absolute inset-0 bg-pastelYellow rounded-full blur-md"></div>
+                            <img src="https://i.supaimg.com/ce38aa7f-5e5b-457c-bd02-975186cf8be2/867ec8ef-ff57-441d-831c-9a27d3be7ac7.jpg" 
+                                 alt="Aqila Profile" 
+                                 class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-cute"
+                                 onerror="this.src='https://placehold.co/300x300/A7C7E7/FFFFFF?text=Aqila+Profile'">
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-2/3 space-y-4">
+                        <div class="inline-block bg-pastelBlue-light text-pastelBlue-dark font-bold px-3 py-1 rounded-lg text-xs uppercase tracking-wider">
+                            Tentang Saya
+                        </div>
+                        <h2 class="text-3xl font-cute font-bold text-softDark">Berdedikasi, Komunikatif & Cekatan</h2>
+                        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                            Saya merupakan individu yang berpengalaman dalam menjalankan pekerjaan secara sistematis dan berfokus pada hasil akhir yang memuaskan. Berpengalaman sebagai staff event, crew kitchen, dan waitress melatih saya memiliki kemampuan kerja sama tim yang kuat, pelayanan pelanggan yang responsif, serta keterampilan mengendalikan situasi <i>chaos</i> pada jam ramai.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                            Memiliki ketertarikan tinggi untuk berkarir dalam bidang <b>FnB</b> dan <b>Digital Marketing</b>. Terbiasa bekerja dalam sistem shift serta di bawah tekanan demi menghasilkan pelayanan terbaik.
+                        </p>
+
+                        <!-- Quick Badges -->
+                        <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <div class="bg-pastelYellow-light p-3 rounded-2xl border border-amber-200 flex items-center gap-3">
+                                <span class="text-xl">📍</span>
+                                <div>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Lokasi</p>
+                                    <p class="text-xs font-semibold text-softDark">Bekasi Utara</p>
+                                </div>
+                            </div>
+                            <div class="bg-pastelPink-light p-3 rounded-2xl border border-pastelPink/30 flex items-center gap-3">
+                                <span class="text-xl">🎓</span>
+                                <div>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Pendidikan</p>
+                                    <p class="text-xs font-semibold text-softDark">S1 Ilmu Hukum</p>
+                                </div>
+                            </div>
+                            <div class="bg-pastelBlue-light p-3 rounded-2xl border border-pastelBlue/30 flex items-center gap-3 col-span-2 sm:col-span-1">
+                                <span class="text-xl">💡</span>
+                                <div>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Fokus</p>
+                                    <p class="text-xs font-semibold text-softDark">FnB & Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE SECTION -->
+        <section id="experience" class="py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="bg-pastelPink-light text-pastelPink-dark font-bold px-3 py-1 rounded-lg text-xs uppercase tracking-wider">Rekam Jejak</span>
+                <h2 class="text-3xl md:text-4xl font-cute font-bold text-softDark">Pengalaman Kerja</h2>
+                <p class="text-slate-500 text-sm">Dedikasi dalam menyajikan pelayanan dan pengelolaan operasional terbaik.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Experience Card 1 -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-pastelYellow-accent/40 shadow-cute hover:shadow-cute-hover transition-all relative flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-pastelYellow rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            🍳
+                        </div>
+                        <span class="text-xs font-semibold text-amber-600 bg-pastelYellow-light px-2.5 py-1 rounded-full">2023 - 2024</span>
+                        <h3 class="font-cute font-bold text-xl text-softDark mt-3">Pemilik Usaha Bisnis Sampingan</h3>
+                        <p class="text-xs text-slate-400 font-medium mb-4">Risoles Mayo & Pudding</p>
+                        
+                        <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Merancang bisnis dari nol: modal, nama toko, kemasan & strategi pemasaran.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Mengelola pemasaran: foto/video produk, caption promosi & door to door.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Mengelola stok barang & mencatat perubahan stok secara rutin.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Melayani <b>100+ transaksi</b> penjualan bulanan via Pre-Order.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-pastelBlue/40 shadow-cute hover:shadow-cute-hover transition-all relative flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-pastelBlue-light rounded-2xl flex items-center justify-center text-2xl mb-4 text-pastelBlue-dark group-hover:scale-110 transition-transform">
+                            👩‍🍳
+                        </div>
+                        <span class="text-xs font-semibold text-pastelBlue-dark bg-pastelBlue-light px-2.5 py-1 rounded-full">27 April 2025</span>
+                        <h3 class="font-cute font-bold text-xl text-softDark mt-3">Kitchen Crew</h3>
+                        <p class="text-xs text-slate-400 font-medium mb-4">Festival Kutoarjo</p>
+                        
+                        <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelBlue-dark mt-0.5">•</span>
+                                Mengatur persiapan persediaan stok bahan makanan event.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelBlue-dark mt-0.5">•</span>
+                                Menyiapkan peralatan masak yang higienis sesuai SOP.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelBlue-dark mt-0.5">•</span>
+                                Bekerja sama dengan head chef menyajikan fusion makanan daerah.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelBlue-dark mt-0.5">•</span>
+                                Melakukan evaluasi jalannya konsumsi event secara menyeluruh.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-pastelPink/40 shadow-cute hover:shadow-cute-hover transition-all relative flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-pastelPink-light rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            🍽️
+                        </div>
+                        <span class="text-xs font-semibold text-pastelPink-dark bg-pastelPink-light px-2.5 py-1 rounded-full">19 April 2026</span>
+                        <h3 class="font-cute font-bold text-xl text-softDark mt-3">Waitress / Server</h3>
+                        <p class="text-xs text-slate-400 font-medium mb-4">Festival Kutoarjo</p>
+                        
+                        <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Menyambut & melayani <b>400-600 pengunjung</b> per hari.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Koordinasi bagian kitchen untuk <b>500+ porsi</b> piring keluar sehari.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Menjaga kerapian, kebersihan, dan sanitasi area festival.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pastelPink-dark mt-0.5">•</span>
+                                Menangani situasi <i>chaos</i> pengunjung agar tetap kondusif & ramah.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ORGANIZATION & EDUCATION SECTION -->
+        <section id="organization" class="py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Organization Column -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-pastelBlue rounded-2xl text-white">
+                            <i class="fa-solid fa-users text-xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-cute font-bold text-softDark">Pengalaman Organisasi</h2>
+                            <p class="text-xs text-slate-500">Kepemimpinan dan kerja sama tim</p>
+                        </div>
+                    </div>
+
+                    <!-- Org Item 1 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-cute space-y-3 relative overflow-hidden">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-cute font-bold text-lg text-softDark">DSC (Developer Student Club)</h3>
+                                <p class="text-xs text-pastelBlue-dark font-semibold">Universitas Bhayangkara Jakarta Raya</p>
+                            </div>
+                            <span class="text-[11px] font-bold bg-pastelBlue-light text-pastelBlue-dark px-2.5 py-1 rounded-full">2025 - Sekarang</span>
+                        </div>
+                        <p class="text-xs font-bold text-slate-600 bg-slate-50 px-3 py-1.5 rounded-xl inline-block border border-slate-100">
+                            Core Team Digital Marketing
+                        </p>
+                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li>Menganalisis performa konten (engagement rate, views, likes) sosial media brand.</li>
+                            <li>Mengidentifikasi tren audiens untuk merencanakan strategi konten yang menarik.</li>
+                            <li>Menguasai dasar penerapan SEO & strategi marketing digital.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Org Item 2 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-cute space-y-3 relative overflow-hidden">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-cute font-bold text-lg text-softDark">Jurnal Kusuma</h3>
+                                <p class="text-xs text-pastelPink-dark font-semibold">Organisasi Jurnalistik</p>
+                            </div>
+                            <span class="text-[11px] font-bold bg-pastelPink-light text-pastelPink-dark px-2.5 py-1 rounded-full">2022 - 2023</span>
+                        </div>
+                        <p class="text-xs font-bold text-slate-600 bg-slate-50 px-3 py-1.5 rounded-xl inline-block border border-slate-100">
+                            Ketua Organisasi
+                        </p>
+                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li>Melakukan wawancara langsung terhadap berbagai narasumber.</li>
+                            <li>Membuat dan mengelola website resmi organisasi jurnalistik.</li>
+                            <li>Mengkoordinasi tim dan bertanggung jawab membangun hubungan harmonis dengan narasumber.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education Column -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-pastelPink rounded-2xl text-white">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-cute font-bold text-softDark">Pendidikan</h2>
+                            <p class="text-xs text-slate-500">Latar belakang akademis</p>
+                        </div>
+                    </div>
+
+                    <!-- Edu Item 1 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-cute space-y-3 relative">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-cute font-bold text-lg text-softDark">Universitas Bhayangkara Jakarta Raya</h3>
+                                <p class="text-xs text-slate-500">S1 Ilmu Hukum</p>
+                            </div>
+                            <span class="text-[11px] font-bold bg-pastelYellow px-2.5 py-1 rounded-full text-amber-700">2024 - Sekarang</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Aktif mengembangkan pemikiran kritis, legal reasoning, serta kepemimpinan organisasi di lingkup kampus.
+                        </p>
+                    </div>
+
+                    <!-- Edu Item 2 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-cute space-y-3 relative">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-cute font-bold text-lg text-softDark">SMA Negeri 4 Purworejo</h3>
+                                <p class="text-xs text-slate-500">Jurusan IPS</p>
+                            </div>
+                            <span class="text-[11px] font-bold bg-slate-100 px-2.5 py-1 rounded-full text-slate-600">2021 - 2024</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Aktif dalam kegiatan jurnalistik sekolah serta pembentukan karakter kepemimpinan awal.
+                        </p>
+                    </div>
+
+                    <!-- Soft Cartoon Quote Box -->
+                    <div class="bg-pastelYellow-light p-6 rounded-3xl border border-amber-200 flex items-center gap-4">
+                        <span class="text-3xl">🌸</span>
+                        <p class="text-xs text-slate-700 italic leading-relaxed">
+                            "Menyeimbangkan ilmu hukum dengan keterampilan praktis pelayanan & pemasaran digital untuk dampak sosial yang positif."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="bg-pastelYellow text-amber-700 font-bold px-3 py-1 rounded-lg text-xs uppercase tracking-wider">Kemampuan</span>
+                <h2 class="text-3xl md:text-4xl font-cute font-bold text-softDark">Skill & Keahlian</h2>
+                <p class="text-slate-500 text-sm">Kombinasi soft skill interpersonal & hard skill teknis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Soft Skills -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-pastelPink/30 shadow-cute">
+                    <h3 class="font-cute font-bold text-xl text-softDark mb-6 flex items-center gap-2">
+                        <span class="text-pastelPink-dark">💖</span> Soft Skills
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-3 bg-pastelPink-light rounded-2xl border border-pastelPink/20 flex items-center gap-3">
+                            <span class="text-lg">👑</span>
+                            <span class="text-xs font-bold text-softDark">Leadership</span>
+                        </div>
+                        <div class="p-3 bg-pastelPink-light rounded-2xl border border-pastelPink/20 flex items-center gap-3">
+                            <span class="text-lg">🗣️</span>
+                            <span class="text-xs font-bold text-softDark">Komunikasi Ramah</span>
+                        </div>
+                        <div class="p-3 bg-pastelPink-light rounded-2xl border border-pastelPink/20 flex items-center gap-3">
+                            <span class="text-lg">⏰</span>
+                            <span class="text-xs font-bold text-softDark">Manajemen Waktu</span>
+                        </div>
+                        <div class="p-3 bg-pastelPink-light rounded-2xl border border-pastelPink/20 flex items-center gap-3">
+                            <span class="text-lg">🤝</span>
+                            <span class="text-xs font-bold text-softDark">Kerja Sama Tim</span>
+                        </div>
+                        <div class="p-3 bg-pastelPink-light rounded-2xl border border-pastelPink/20 flex items-center gap-3">
+                            <span class="text-lg">🧩</span>
+                            <span class="text-xs font-bold text-softDark">Problem Solving</span>
+                        </div>
+                        <div class="p-3 bg-pastelPink-light rounded-2xl border border-pastelPink/20 flex items-center gap-3">
+                            <span class="text-lg">🌟</span>
+                            <span class="text-xs font-bold text-softDark">Etika & Loyalitas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hard Skills & Tools -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-pastelBlue/30 shadow-cute space-y-6">
+                    <h3 class="font-cute font-bold text-xl text-softDark mb-4 flex items-center gap-2">
+                        <span class="text-pastelBlue-dark">🛠️</span> Hard Skills & Perangkat
+                    </h3>
+
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Software & Tools</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-2 bg-slate-100 rounded-xl text-xs font-bold text-slate-700 flex items-center gap-1.5"><i class="fa-brands fa-tiktok text-black"></i> TikTok</span>
+                            <span class="px-3 py-2 bg-pink-50 text-pink-600 rounded-xl text-xs font-bold flex items-center gap-1.5"><i class="fa-brands fa-instagram"></i> Instagram</span>
+                            <span class="px-3 py-2 bg-blue-50 text-blue-600 rounded-xl text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-palette"></i> Canva</span>
+                            <span class="px-3 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-video"></i> CapCut</span>
+                            <span class="px-3 py-2 bg-green-50 text-green-700 rounded-xl text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-globe"></i> Google Sites</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Microsoft Office & Stock</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-2 bg-blue-100 text-blue-800 rounded-xl text-xs font-bold">MS Word</span>
+                            <span class="px-3 py-2 bg-orange-100 text-orange-800 rounded-xl text-xs font-bold">MS PowerPoint</span>
+                            <span class="px-3 py-2 bg-emerald-100 text-emerald-800 rounded-xl text-xs font-bold">MS Excel</span>
+                            <span class="px-3 py-2 bg-pastelYellow text-amber-800 rounded-xl text-xs font-bold">Stock Management</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Bahasa</p>
+                        <div class="flex gap-4">
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
+                                🇮🇩 Bahasa Indonesia <span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-md">Aktif</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
+                                🇬🇧 Bahasa Inggris <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md">Basic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-16 mb-12">
+            <div class="bg-gradient-to-r from-pastelPink-light via-pastelYellow-light to-pastelBlue-light rounded-3xl p-8 md:p-12 border-2 border-pastelPink/30 shadow-cute text-center max-w-4xl mx-auto space-y-6">
+                <span class="text-4xl">💌</span>
+                <h2 class="text-3xl md:text-4xl font-cute font-bold text-softDark">Mari Bekerja Sama!</h2>
+                <p class="text-slate-600 max-w-lg mx-auto text-sm md:text-base">
+                    Saya selalu terbuka untuk peluang karir di bidang FnB, Waitress, Digital Marketing, maupun kolaborasi project event.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <a href="mailto:fnsesi@gmail.com" class="bg-white text-softDark font-bold px-6 py-3.5 rounded-2xl shadow-cute hover:scale-105 transition-all flex items-center gap-3 border border-slate-200">
+                        <i class="fa-solid fa-envelope text-pastelPink-dark text-lg"></i>
+                        <span>fnsesi@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/6287793534204" target="_blank" class="bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-2xl shadow-cute hover:bg-emerald-600 hover:scale-105 transition-all flex items-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>+62 877-9353-4204</span>
+                    </a>
+                </div>
+
+                <div class="pt-6 text-xs text-slate-500 flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-pastelPink-dark"></i>
+                    <span>Bekasi Utara, Jawa Barat, Indonesia</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-6 bg-white/50 text-center text-xs text-slate-400">
+        <p>© 2026 Aqila Selena Fadhilatun Nisa. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
